@@ -116,7 +116,6 @@ def mouseclick_reta(event):
         print(reta.getX1())
         aux=1
     else:
-        print("entrei no else!")
         reta.setX2(event.x)
         reta.setY2(event.y)
 
@@ -305,16 +304,15 @@ def Translacao():
     dX = float(entryDX.get())
     dY = float(entryDY.get())
     if(str(nomePoligono) == "('reta',)" or str(nomePoligono) == "('circulo',)" or str(nomePoligono) == "('retangulo',)"):
-        print("OIR")
         x1Linha = objeto.getX1() + dX
         y1Linha = objeto.getY1() + dY
         x2Linha = objeto.getX2() + dX
         y2Linha = objeto.getY2() + dY
         canvas.coords(objeto.getID(), x1Linha, y1Linha, x2Linha, y2Linha)
-        listaPoligonos[i].setX1(x1Linha)
-        listaPoligonos[i].setY1(y1Linha)
-        listaPoligonos[i].setX2(x2Linha)
-        listaPoligonos[i].setY2(y2Linha)
+        listaPoligonos[posicao].setX1(x1Linha)
+        listaPoligonos[posicao].setY1(y1Linha)
+        listaPoligonos[posicao].setX2(x2Linha)
+        listaPoligonos[posicao].setY2(y2Linha)
     elif(str(nomePoligono) == "('quadrilatero',)"):
         x1Linha = objeto.getX1() + dX
         y1Linha = objeto.getY1() + dY
@@ -325,14 +323,14 @@ def Translacao():
         x4Linha = objeto.getX4() + dX
         y4Linha = objeto.getY4() + dY
         canvas.coords(objeto.getID(), x1Linha, y1Linha, x2Linha, y2Linha, x3Linha, y3Linha, x4Linha, y4Linha, x1Linha, y1Linha)
-        listaPoligonos[i].setX1(x1Linha)
-        listaPoligonos[i].setY1(y1Linha)
-        listaPoligonos[i].setX2(x2Linha)
-        listaPoligonos[i].setY2(y2Linha)
-        listaPoligonos[i].setX3(x3Linha)
-        listaPoligonos[i].setY3(y3Linha)
-        listaPoligonos[i].setX4(x4Linha)
-        listaPoligonos[i].setY4(y4Linha)
+        listaPoligonos[posicao].setX1(x1Linha)
+        listaPoligonos[posicao].setY1(y1Linha)
+        listaPoligonos[posicao].setX2(x2Linha)
+        listaPoligonos[posicao].setY2(y2Linha)
+        listaPoligonos[posicao].setX3(x3Linha)
+        listaPoligonos[posicao].setY3(y3Linha)
+        listaPoligonos[posicao].setX4(x4Linha)
+        listaPoligonos[posicao].setY4(y4Linha)
     elif(str(nomePoligono) == "('triangulo',)"):
         x1Linha = objeto.getX1() + dX
         y1Linha = objeto.getY1() + dY
@@ -341,12 +339,12 @@ def Translacao():
         x3Linha = objeto.getX3() + dX
         y3Linha = objeto.getY3() + dY
         canvas.coords(objeto.getID(), x1Linha, y1Linha, x2Linha, y2Linha, x3Linha, y3Linha, x1Linha, y1Linha)
-        listaPoligonos[i].setX1(x1Linha)
-        listaPoligonos[i].setY1(y1Linha)
-        listaPoligonos[i].setX2(x2Linha)
-        listaPoligonos[i].setY2(y2Linha)
-        listaPoligonos[i].setX3(x3Linha)
-        listaPoligonos[i].setY3(y3Linha)
+        listaPoligonos[posicao].setX1(x1Linha)
+        listaPoligonos[posicao].setY1(y1Linha)
+        listaPoligonos[posicao].setX2(x2Linha)
+        listaPoligonos[posicao].setY2(y2Linha)
+        listaPoligonos[posicao].setX3(x3Linha)
+        listaPoligonos[posicao].setY3(y3Linha)
 
 
 def Escala():
@@ -366,10 +364,10 @@ def Escala():
         x2Linha = objeto.getX2() * sX
         y2Linha = objeto.getY2() * sY
         canvas.coords(objeto.getID(), x1Linha, y1Linha, x2Linha, y2Linha)
-        listaPoligonos[i].setX1(x1Linha)
-        listaPoligonos[i].setY1(y1Linha)
-        listaPoligonos[i].setX2(x2Linha)
-        listaPoligonos[i].setY2(y2Linha)
+        listaPoligonos[posicao].setX1(x1Linha)
+        listaPoligonos[posicao].setY1(y1Linha)
+        listaPoligonos[posicao].setX2(x2Linha)
+        listaPoligonos[posicao].setY2(y2Linha)
     elif(str(nomePoligono) == "('quadrilatero',)"):
         x1Linha = objeto.getX1() * sX
         y1Linha = objeto.getY1() * sY
@@ -380,14 +378,14 @@ def Escala():
         x4Linha = objeto.getX4() * sX
         y4Linha = objeto.getY4() * sY
         canvas.coords(objeto.getID(), x1Linha, y1Linha, x2Linha, y2Linha, x3Linha, y3Linha, x4Linha, y4Linha, x1Linha, y1Linha)
-        listaPoligonos[i].setX1(x1Linha)
-        listaPoligonos[i].setY1(y1Linha)
-        listaPoligonos[i].setX2(x2Linha)
-        listaPoligonos[i].setY2(y2Linha)
-        listaPoligonos[i].setX3(x3Linha)
-        listaPoligonos[i].setY3(y3Linha)
-        listaPoligonos[i].setX4(x4Linha)
-        listaPoligonos[i].setY4(y4Linha)
+        listaPoligonos[posicao].setX1(x1Linha)
+        listaPoligonos[posicao].setY1(y1Linha)
+        listaPoligonos[posicao].setX2(x2Linha)
+        listaPoligonos[posicao].setY2(y2Linha)
+        listaPoligonos[posicao].setX3(x3Linha)
+        listaPoligonos[posicao].setY3(y3Linha)
+        listaPoligonos[posicao].setX4(x4Linha)
+        listaPoligonos[posicao].setY4(y4Linha)
     elif(str(nomePoligono) == "('triangulo',)"):
         x1Linha = objeto.getX1() * sX
         y1Linha = objeto.getY1() * sY
@@ -396,12 +394,12 @@ def Escala():
         x3Linha = objeto.getX3() * sX
         y3Linha = objeto.getY3() * sY
         canvas.coords(objeto.getID(), x1Linha, y1Linha, x2Linha, y2Linha, x3Linha, y3Linha, x1Linha, y1Linha)
-        listaPoligonos[i].setX1(x1Linha)
-        listaPoligonos[i].setY1(y1Linha)
-        listaPoligonos[i].setX2(x2Linha)
-        listaPoligonos[i].setY2(y2Linha)
-        listaPoligonos[i].setX3(x3Linha)
-        listaPoligonos[i].setY3(y3Linha)
+        listaPoligonos[posicao].setX1(x1Linha)
+        listaPoligonos[posicao].setY1(y1Linha)
+        listaPoligonos[posicao].setX2(x2Linha)
+        listaPoligonos[posicao].setY2(y2Linha)
+        listaPoligonos[posicao].setX3(x3Linha)
+        listaPoligonos[posicao].setY3(y3Linha)
 
 
 def Rotacao():
@@ -422,6 +420,10 @@ def Rotacao():
         x2Linha = (objeto.getX2() * cosseno) - (objeto.getY2() * seno)
         y2Linha = (objeto.getX2() * seno) + (objeto.getY2() * cosseno)
         canvas.coords(objeto.getID(), x1Linha, y1Linha, x2Linha, y2Linha)
+        listaPoligonos[posicao].setX1(x1Linha)
+        listaPoligonos[posicao].setY1(y1Linha)
+        listaPoligonos[posicao].setX2(x2Linha)
+        listaPoligonos[posicao].setY2(y2Linha)
     elif(str(nomePoligono) == "('quadrilatero',)"):
         x1Linha = (objeto.getX1() * cosseno) - (objeto.getY1() * seno)
         y1Linha = (objeto.getX1() * seno) + (objeto.getY1() * cosseno)
@@ -432,6 +434,14 @@ def Rotacao():
         x4Linha = (objeto.getX4() * cosseno) - (objeto.getY4() * seno)
         y4Linha = (objeto.getX4() * seno) + (objeto.getY4() * cosseno)
         canvas.coords(objeto.getID(), x1Linha, y1Linha, x2Linha, y2Linha, x3Linha, y3Linha, x4Linha, y4Linha, x1Linha, y1Linha)
+        listaPoligonos[posicao].setX1(x1Linha)
+        listaPoligonos[posicao].setY1(y1Linha)
+        listaPoligonos[posicao].setX2(x2Linha)
+        listaPoligonos[posicao].setY2(y2Linha)
+        listaPoligonos[posicao].setX3(x3Linha)
+        listaPoligonos[posicao].setY3(y3Linha)
+        listaPoligonos[posicao].setX4(x4Linha)
+        listaPoligonos[posicao].setY4(y4Linha)
     elif(str(nomePoligono) == "('triangulo',)"):
         x1Linha = (objeto.getX1() * cosseno) - (objeto.getY1() * seno)
         y1Linha = (objeto.getX1() * seno) + (objeto.getY1() * cosseno)
@@ -440,7 +450,12 @@ def Rotacao():
         x3Linha = (objeto.getX3() * cosseno) - (objeto.getY3() * seno)
         y3Linha = (objeto.getX3() * seno) + (objeto.getY3() * cosseno)
         canvas.coords(objeto.getID(), x1Linha, y1Linha, x2Linha, y2Linha, x3Linha, y3Linha, x1Linha, y1Linha)
-
+        listaPoligonos[posicao].setX1(x1Linha)
+        listaPoligonos[posicao].setY1(y1Linha)
+        listaPoligonos[posicao].setX2(x2Linha)
+        listaPoligonos[posicao].setY2(y2Linha)
+        listaPoligonos[posicao].setX3(x3Linha)
+        listaPoligonos[posicao].setY3(y3Linha)
 
 def Quit():
     mainframe.destroy()
